@@ -3,7 +3,7 @@ import NavBar from "./NavBar"
 import SideBar from "./SideBar"
 import Map from "./Map"
 
-function Page () {
+function Page() {
     //declaring our API keys from the MTA API so that we can
     //access them from the env file
 
@@ -12,7 +12,7 @@ function Page () {
 
     //creating state to hold subway station data
     const [stations, setStations] = useState([])
-    
+
     //creating state to hold information for the G train
     // const [GTrain, setGTrain] = useState([])
 
@@ -26,19 +26,20 @@ function Page () {
     // )
 
     //fetching the total station data for map
-        useEffect(() => {
-            fetch("https://data.cityofnewyork.us/resource/kk4q-3rt2.json")
-        .then(response => response.json())
-        .then(data => setStations(data)), []})
+    useEffect(() => {
+        fetch("https://data.cityofnewyork.us/resource/kk4q-3rt2.json")
+            .then(response => response.json())
+            .then(data => setStations(data))
+    },[])
 
-    return(
+    return (
         <>
-        <NavBar />
-        <div class="flex-container">
-        <p>page</p>
-        <SideBar />
-        <Map stations={stations} />
-        </div>
+            <NavBar />
+            <div class="flex-container">
+                <p>page</p>
+                <SideBar />
+                <Map stations={stations} />
+            </div>
         </>
     )
 }

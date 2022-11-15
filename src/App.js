@@ -1,21 +1,49 @@
 import React from "react"
-import { Routes, Route } from "react-router-dom";
-import Header from "./Header";
-import Page from "./Page";
+import {
+  Switch, 
+  Route, 
+  Link
+} from "react-router-dom"
+
+import Map from "./Page";
 import About from "./About";
 import NavBar from "./NavBar";
+import Lines from "./Lines";
 import './App.css';
 
 
 
 function App() {
   return (
+<>
+    <div>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+        <li>
+          <Link to="/lines">Lines</Link>
+        </li>
+      </ul>
 
-    <Routes>
-      <Route path="/" element={<Page />} />
-      <Route path="/lines" element={<Lines />} />
-      <Route path="/about" element={<About />} />
-    </Routes>
+      {/* switch statement here */}
+
+      <Switch>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/lines">
+          <Lines />
+        </Route>
+        <Route path="/">
+          <Map />
+        </Route>
+      </Switch>
+    </div>
+</>
     // <Router>
     //   <div>
     //     <NavBar />

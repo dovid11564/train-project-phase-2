@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import NavBar from "./NavBar"
 import SideBar from "./SideBar"
 import Map from "./Map"
+import SubmitForm from "./SubmitForm"
 
 function Page() {
     //declaring our API keys from the MTA API so that we can
@@ -39,6 +40,7 @@ function Page() {
                 <p>page</p>
                 <SideBar />
                 <Map stations={stations} />
+                <SubmitForm />
             </div>
         </>
     )

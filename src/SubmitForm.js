@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 export default function SubmitForm() {
     const [comment, setComment] = useState("")
+    const [name, setName]= useState('')
 
     const [comments, setComments] = useState([])
 
@@ -17,14 +18,19 @@ useEffect(()=>{
 
    
     
-    function addComment(){
+    function addComment(event){
+        event.preventDefault();
+        const newObject={
+            name: name,
+            comment: comment,
+        }
         fetch(' http://localhost:3000/comments', {
     method: 'POST',
     headers: {'Content-Type' : 'application/json'},
-    body: JSON.stringify(comment)
+    body: JSON.stringify(newObject)
   })
   .then(r=>r.json())
-  .then(setComments ([...comments, comment]))
+  .then(setComments ([...comments, newObject]))
 }
 
 

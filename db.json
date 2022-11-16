@@ -2,9 +2,8 @@
     "comments": [
         {
             "id": 0,
-            "name": "h",
-            "image": "url",
-            "comment": "hello"
+            "name": "Alex",
+            "comment": "This is my Favorite Line"
         }
     ]
 }

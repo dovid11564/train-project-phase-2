@@ -34,7 +34,7 @@ function Page() {
 
     return (
         <>
-            <NavBar />
+            
             <div class="flex-container">
                 <Map stations={stations} />
                 

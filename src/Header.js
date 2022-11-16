@@ -1,17 +1,37 @@
-function Header () {
-    return(
-        <header className='header'>
-        <a className='header-home'href="#home" >Home</a>
-        <label for="Lines"></label>
-<select className='header-lines'name="Lines" id="Lines">
-<option value="All">Metro-Lines</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-</select>
-        <a className='header-about'href="#about" >About</a>
-        </header>
-    )
+
+import About from "./About"
+import Lines from "./Lines"
+import Page from "./Page"
+import NavBar from "./NavBar"
+import {
+  Switch,
+  Route,
+} from "react-router-dom"
+
+
+
+function Header() {
+  return (
+    <>
+    <h2>Website Name</h2>
+    <NavBar />
+      <div>
+
+        {/* switch statements  */}
+
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/lines">
+            <Lines />
+          </Route>
+          <Route path="/">
+            <Page />
+          </Route>
+        </Switch>
+      </div>
+    </>
+  )
 }
 export default Header

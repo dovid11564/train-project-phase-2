@@ -80,12 +80,10 @@
 }
 
 .main-container{
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  margin-top: -200px;
 }
 .comment-flexbox{
   display:flex;

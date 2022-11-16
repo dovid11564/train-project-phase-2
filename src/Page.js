@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import NavBar from "./NavBar"
 import Map from "./Map"
 import SubmitForm from "./SubmitForm"
 
@@ -36,7 +37,7 @@ function Page() {
             
             <div class="flex-container">
                 <Map stations={stations} />
-                <SubmitForm />
+                
             </div>
         </>
     )

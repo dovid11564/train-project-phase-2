@@ -36,8 +36,6 @@ function Lines() {
 
     //next line lets us do deeper client side routing
     let match = useRouteMatch()
-    console.log(match)
-    console.log(match.url)
 
     //state for our dropdown
 

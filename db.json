@@ -1,14 +1,19 @@
 {
   "comments": [
     {
-      "id": 0,
-      "name": "Alex",
-      "comment": "This is my Favorite Line"
+
+      "id": 1,
+      "line": "a",
+      "name": "",
+      "image": "",
+      "comment": ""
     },
     {
-      "name": "Elena",
-      "comment": "I hate this Line",
-      "id": 1
-    }
+      "id": 2,
+      "line": "b",
+      "name": "",
+      "image": "",
+      "comment": ""
+    },
   ]
 }

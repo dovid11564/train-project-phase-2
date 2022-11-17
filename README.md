@@ -68,3 +68,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+ {comments.map((text) => (
+                    (match === text.id ) {
+                        return <div className='comment-submitted' key={text.id}>
+                        <h6>{text.name}</h6>
+                        
+                      <img className='comment-image' src= {text.image} alt=''/>
+                        <div className='submitted-comment'> {text.comment}</div>
+                        </div>
+                    }
+                    
+                    
+
+                ))}}

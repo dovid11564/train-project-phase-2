@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import Map from "./Map"
+import HomePageLines from "./HomePageLines"
 
 function Page() {
 
@@ -18,6 +19,7 @@ function Page() {
     return (
         <>  
             <div class="flex-container">
+                <HomePageLines/>
                 <Map stations={stations} />
             </div>
         </>

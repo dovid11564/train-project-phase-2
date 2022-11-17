@@ -1,7 +1,8 @@
 import React from "react";
+import SubmitForm from "../SubmitForm";
 
 function Z () {
-    return <h2> Z train info!</h2>
+    return <SubmitForm />
 }
 
 export default Z

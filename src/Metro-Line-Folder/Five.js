@@ -1,7 +1,8 @@
 import React from "react";
+import SubmitForm from "../SubmitForm";
 
 function Five () {
-    return <h2> 5 train info!</h2>
+    return <SubmitForm />
 }
 
 export default Five

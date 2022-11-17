@@ -1,7 +1,8 @@
 import React from "react";
+import SubmitForm from "../SubmitForm";
 
 function W () {
-    return <h2> W train info!</h2>
+    return <SubmitForm />
 }
 
 export default W

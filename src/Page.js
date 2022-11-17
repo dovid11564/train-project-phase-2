@@ -1,8 +1,6 @@
 
 import { useState, useEffect } from "react"
-import NavBar from "./NavBar"
 import Map from "./Map"
-import SubmitForm from "./SubmitForm"
 
 function Page() {
    
@@ -21,7 +19,7 @@ function Page() {
     },[])
 
 
-function Page({ stations }) {
+
     return (
         <>
             <div class="flex-container">

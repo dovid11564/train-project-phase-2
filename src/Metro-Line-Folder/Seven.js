@@ -1,7 +1,8 @@
 import React from "react";
+import SubmitForm from "../SubmitForm";
 
 function Seven () {
-    return <h2> 7 train info!</h2>
+    return <SubmitForm />
 }
 
 export default Seven

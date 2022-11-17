@@ -1,7 +1,8 @@
 import React from "react";
+import SubmitForm from "../SubmitForm";
 
 function M () {
-    return <h2> M train info!</h2>
+    return <SubmitForm />
 }
 
 export default M

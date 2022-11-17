@@ -1,7 +1,8 @@
 import React from "react";
+import SubmitForm from "../SubmitForm";
 
 function C () {
-    return <h2> C train info!</h2>
+    return <SubmitForm />
 }
 
 export default C

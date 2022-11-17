@@ -26,7 +26,7 @@ import T from "./Metro-Line-Folder/T.js"
 import S from "./Metro-Line-Folder/S.js"
 
 import { NavLink, Switch, Route, useRouteMatch } from 'react-router-dom';
-import SubmitForm from './SubmitForm';
+
 
 
 
@@ -188,13 +188,6 @@ function Lines() {
                     </Switch>
                 </span>
             </div>
-            <SubmitForm />
-
-
-
-
-
-
         </>
     )
 }

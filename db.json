@@ -1,6 +1,7 @@
 {
   "comments": [
     {
+
       "id": 1,
       "line": "a",
       "name": "",
@@ -14,12 +15,5 @@
       "image": "",
       "comment": ""
     },
-    {
-      "line": "A",
-      "name": "Test",
-      "comment": "HEYYYY",
-      "image": "",
-      "id": 3
-    }
   ]
 }

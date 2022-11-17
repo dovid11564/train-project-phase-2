@@ -6,7 +6,7 @@ export default function HomePageLines(){
 const [lines, setLines]= useState([])
 
 useEffect(()=>{
-    fetch('http://localhost:8000/')
+    fetch('http://localhost:3000/linesInformation')
     .then(r=>r.json())
     .then(data=>setLines(data))
 },[])
@@ -18,9 +18,9 @@ useEffect(()=>{
             {lines.map((line)=>{
                 return (
                     <div> 
-                        <h3>{line.name}</h3>
-                        <img src={line.image} alt={line.name} />
-                        <img src={line.map_image} alt={line.name}    />
+                        <h3>{line.line}</h3>
+                        <img className='metro-image'src={line.image} alt={line.line} />
+                        <img className='metro-map'src={line.map_image} alt={line.name}    />
                         <p>{line.info}</p>
                     </div>
                 )

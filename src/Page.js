@@ -19,9 +19,10 @@ function Page() {
     return (
         <>  
             <div class="flex-container">
-                <HomePageLines/>
+                
                 <Map stations={stations} />
             </div>
+            <HomePageLines/>
         </>
     )
 }

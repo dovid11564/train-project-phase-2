@@ -1,13 +1,13 @@
-import {NavLink} from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
-function NavBar () {
-    return(
-      <div className='header'>
+function NavBar() {
+  return (
+    <div className='header'>
       <NavLink to="/">Home</NavLink>
       <NavLink to="/lines">Lines</NavLink>
       <NavLink to="/about">About</NavLink>
-      </div>
-    )
+    </div>
+  )
 }
 
 export default NavBar

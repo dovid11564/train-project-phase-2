@@ -1,5 +1,6 @@
 
 import React, {useEffect, useState} from 'react'
+
 import About from "./About"
 import Lines from "./Lines"
 import Page from "./Page"
@@ -14,6 +15,17 @@ import {
 function Header() {
 
 
+  //creating state to hold subway station data
+  const [stations, setStations] = useState([])
+
+  //fetching the total station data for map
+  useEffect(() => {
+    fetch("https://data.cityofnewyork.us/resource/kk4q-3rt2.json")
+      .then(response => response.json())
+      .then(data => setStations(data))
+  }, [])
+
+
   const [info, setInfo]= useState([])
 
 
@@ -26,10 +38,11 @@ function Header() {
 }, [])
 
 
+
   return (
     <>
-    <h2>Website Name</h2>
-    <NavBar />
+      <h2>dovid and Alex's metro site</h2>
+      <NavBar />
       <div>
 
         {/* switch statements  */}
@@ -42,7 +55,7 @@ function Header() {
             <Lines info={info} />
           </Route>
           <Route path="/">
-            <Page />
+            <Page stations={stations} />
           </Route>
         </Switch>
       </div>

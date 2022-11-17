@@ -5,7 +5,7 @@ function Map({ stations }) {
 
     return (
         <div id="map">
-        <MapContainer center={[40.7128, -74.0060]} zoom={13} scrollWheelZoom={false}>
+        <MapContainer center={[40.7884341, -73.96042462582244]} zoom={13} scrollWheelZoom={false}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

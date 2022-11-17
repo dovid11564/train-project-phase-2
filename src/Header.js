@@ -41,7 +41,7 @@ function Header() {
 
   return (
     <>
-      <h2>dovid and Alex's metro site</h2>
+     
       <NavBar />
       <div>
 

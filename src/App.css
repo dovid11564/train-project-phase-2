@@ -39,19 +39,20 @@
 
 #map { 
   height: 50%;
-  width: auto;
+  width: 1850px;
   text-align: center;
  }
+
+.website-title{
+  padding: 5px;
+}
 
 .leaflet-container {
   width: 100%;
   height: 100vh;
 }
 
-#sidebar {
-  border-style: solid;
-  border-color: black;
-}
+
 
 .flex-container {
   display: flex;
@@ -64,9 +65,13 @@
 
 .header {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  padding: 30px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 30px;
+    background-color: rgb(0, 195, 255);
+    align-items: center;
+    align-content: center;
+    
   background-color: rgb(0, 195, 255);
 }
 .header-home{

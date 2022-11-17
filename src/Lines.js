@@ -1,15 +1,30 @@
-import React from 'react';
+import React,{useState} from 'react';
 import SubmitForm from './SubmitForm';
 import Header from './Header'
+import SubwayCard from './SubwayCard';
 
 
-function Lines () {
+function Lines ({info}) {
+
+const [select, setSelect]= useState('all')
+
+const newArray= info.filter(info=>{
+    if (select === 'all') return true
+    return info
+})
+
+
+function handleSelectChange(e){
+    setSelect(e.target.value)
+}
+
+
     return(
         <>
 
         <label for="Lines">Select: </label>
-<select className='header-lines'name="Lines" id="Lines">
-<option>Metro-Lines</option>
+<select value={select} onChange={handleSelectChange} className='header-lines'name="Lines" id="Lines">
+<option value='all'>Metro-Lines </option>
 <optgroup label='Eight Avenue Line'>
   <option>A</option>
   <option>C</option>
@@ -56,6 +71,13 @@ function Lines () {
 
   
 </select>
+
+
+        <div>
+           {info.map((inf)=>{
+           return  <SubwayCard info={inf}/>
+           })}
+        </div>
         <SubmitForm />
         
         </>

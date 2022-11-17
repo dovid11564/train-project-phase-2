@@ -12,7 +12,7 @@ function Page() {
 
     //creating state to hold subway station data
     const [stations, setStations] = useState([])
-
+    
     //creating state to hold information for the G train
     // const [GTrain, setGTrain] = useState([])
 
@@ -24,6 +24,15 @@ function Page() {
     // .then(response => response.json())
     // .then(data => console.log(data))
     // )
+
+   
+
+
+
+
+
+
+
 
     //fetching the total station data for map
     useEffect(() => {

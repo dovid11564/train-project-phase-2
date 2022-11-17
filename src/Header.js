@@ -1,4 +1,5 @@
 
+import React, {useEffect, useState} from 'react'
 import About from "./About"
 import Lines from "./Lines"
 import Page from "./Page"
@@ -11,6 +12,20 @@ import {
 
 
 function Header() {
+
+
+  const [info, setInfo]= useState([])
+
+
+
+
+  useEffect(()=>{
+    fetch('http://localhost:8000')
+    .then(r=>r.json())
+    .then(data=>setInfo(data))
+}, [])
+
+
   return (
     <>
     <h2>Website Name</h2>
@@ -24,7 +39,7 @@ function Header() {
             <About />
           </Route>
           <Route path="/lines">
-            <Lines />
+            <Lines info={info} />
           </Route>
           <Route path="/">
             <Page />

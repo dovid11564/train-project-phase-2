@@ -1,3 +1,4 @@
+
 import React from 'react';
 import A from "./Metro-Line-Folder/A.js"
 import B from "./Metro-Line-Folder/B.js"
@@ -26,6 +27,9 @@ import S from "./Metro-Line-Folder/S.js"
 
 import { NavLink, Switch, Route, useRouteMatch } from 'react-router-dom';
 import SubmitForm from './SubmitForm';
+
+
+
 
 
 function Lines() {
@@ -187,6 +191,12 @@ function Lines() {
                 </span>
             </div>
             <SubmitForm />
+
+
+
+
+
+
         </>
     )
 }

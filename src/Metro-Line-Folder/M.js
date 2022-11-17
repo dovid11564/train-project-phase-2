@@ -2,7 +2,7 @@ import React from "react";
 import SubmitForm from "../SubmitForm";
 
 function M () {
-    return <SubmitForm />
+    return <SubmitForm line={"M"}/>
 }
 
 export default M

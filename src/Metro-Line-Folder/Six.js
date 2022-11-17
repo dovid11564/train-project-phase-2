@@ -2,7 +2,7 @@ import React from "react";
 import SubmitForm from "../SubmitForm";
 
 function Six () {
-    return <SubmitForm />
+    return <SubmitForm line={"6"}/>
 }
 
 export default Six

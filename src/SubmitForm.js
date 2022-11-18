@@ -44,8 +44,6 @@ console.log(match)
     }
 
 
-
-
     const onChangeHandle = (e) => {
         setComment(e.target.value)
     }
@@ -58,8 +56,6 @@ console.log(match)
         setImage(e.target.value)
     }
 
-
-
     return (
         <div className="main-section">
             <div className='main-container'>
@@ -71,9 +67,6 @@ console.log(match)
                     </div>
                 ))}
             
-
-
-
                 <div className='comment-flexbox'>
                     <h3 className='comment-text'>Comment</h3>
                     <input type='text' value={name} onChange={onChangeHandleName} placeholder='Name'></input>

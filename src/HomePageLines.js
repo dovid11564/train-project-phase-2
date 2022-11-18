@@ -11,6 +11,7 @@ useEffect(()=>{
     .then(data=>setLines(data))
 },[])
 
+// const found= lines.find(element => element=== element.line)
 
 
     return(

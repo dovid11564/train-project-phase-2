@@ -42,7 +42,14 @@
   height: 50%;
   width: 1850px;
   text-align: center;
+
 }
+
+  padding: 40px;
+  
+  background-color: white;
+ }
+
 
 .website-title {
   padding: 5px;
@@ -140,8 +147,14 @@
   justify-content: space-evenly;
   width: 100%;
   text-align: center;
-  border-right: black;
+  border-color: black;
   background-color: #FAF9F6;
+ 
+}
+
+.table-div{
+  padding: 50px; 
+
 }
 
 th:hover {
@@ -165,10 +178,14 @@ th:hover {
   width: 190px;
 }
 
-.metro-image {
+
+
+.metro-image{
+
   width: 100px;
   height: 100px;
 }
+
 
 .metro-map {
   width: 100px;
@@ -197,4 +214,9 @@ th:hover {
 
 .NavBarLinks {
   display: flex;
+
+.metro-map{
+  width: 100px;
+  height: 100px;
+
 }

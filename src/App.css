@@ -32,18 +32,19 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-#map { 
+#map {
   height: 50%;
   width: 1850px;
   text-align: center;
- }
+}
 
-.website-title{
+.website-title {
   padding: 5px;
 }
 
@@ -65,59 +66,67 @@
 
 .header {
   display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    padding: 30px;
-    background-color: rgb(0, 195, 255);
-    align-items: center;
-    align-content: center;
-    
+  flex-wrap: nowrap;
+  padding: 30px;
   background-color: rgb(0, 195, 255);
+  align-items: center;
+  align-content: center;
+  background-color: rgb(0, 195, 255);
+  flex-direction: row;
+  justify-content: flex-start;
 }
-.header-home{
-  padding: 15px;
-}
-.header-list{
-  padding: 15px;
-}
-.header-about{
+
+.header-home {
   padding: 15px;
 }
 
-.main-container{
+.header-list {
+  padding: 15px;
+}
+
+.header-about {
+  padding: 15px;
+}
+
+.main-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
 }
-.comment-flexbox{
-  display:flex;
+
+.comment-flexbox {
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
-  
+
 }
-.comment-text{
-  margin:12px 0;
+
+.comment-text {
+  margin: 12px 0;
   font-size: 1.15rem;
   font-weight: 600;
 }
-.text-box{
-  height:75px;
-  width:465px;
+
+.text-box {
+  height: 75px;
+  width: 465px;
   background-color: white;
 }
-.submit-button{
+
+.submit-button {
   height: 40px;
   width: 80px;
   background-color: blue;
   color: white;
   font-size: 1.05rem;
-  margin-top:10px;
+  margin-top: 10px;
   border-radius: 5px;
   border-style: none;
-  cursor:pointer;
+  cursor: pointer;
 }
-.submitted-comment{
+
+.submitted-comment {
   height: 75px;
   width: 465px;
   background-color: white;
@@ -133,8 +142,6 @@
   text-align: center;
   border-right: black;
   background-color: #FAF9F6;
-
-
 }
 
 th:hover {
@@ -154,6 +161,40 @@ th:hover {
   height: 22px;
 }
 
-.comment-image{
+.comment-image {
   width: 190px;
+}
+
+.metro-image {
+  width: 100px;
+  height: 100px;
+}
+
+.metro-map {
+  width: 100px;
+  height: 100px;
+}
+
+.PFP {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  height: 100px;
+
+}
+
+.AboutDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  max-width: 50%;
+  margin: auto;
+}
+
+.NavBarLinks {
+  display: flex;
 }

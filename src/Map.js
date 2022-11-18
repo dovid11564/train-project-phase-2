@@ -8,7 +8,7 @@ function Map({ stations }) {
 
         <>
             <table className='train-table'>
-                <tr className='table-row'>
+                <tr>
                     <th className='th'>Eighth Ave Line</th>
                     <th className='th'><img className="Metro-Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/NYCS-bull-trans-A-Std.svg/1280px-NYCS-bull-trans-A-Std.svg.png" alt="A" /></th>
                     <th className='th'><img className="Metro-Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/NYCS-bull-trans-C-Std.svg/1280px-NYCS-bull-trans-C-Std.svg.png" alt="C" /></th>
@@ -68,7 +68,7 @@ function Map({ stations }) {
 
 
             <div id="map">
-                <MapContainer center={[40.7884341, -73.96042462582244]} zoom={13} scrollWheelZoom={false}>
+                <MapContainer center={[40.7884341, -73.96042462582244]} zoom={12} scrollWheelZoom={false}>
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

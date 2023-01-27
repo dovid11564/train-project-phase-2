@@ -51,7 +51,7 @@ function Header() {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/lines">
+          <Route path="/Lines">
             <Lines info={info} />
           </Route>
           <Route path="/">

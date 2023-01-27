@@ -11,10 +11,13 @@ console.log(match)
     const [comment, setComment] = useState("")
     const [name, setName] = useState('')
     const [image, setImage] = useState('')
+    const [deletee, setDelete]= useState(true)
 
     const [comments, setComments] = useState([])
 
-
+function handleDelete(){
+    setDelete(!deletee)
+}
 
 
     useEffect(() => {
@@ -30,7 +33,7 @@ console.log(match)
         event.preventDefault();
         const newObject = {
             line: line,
-            name: name,
+            name: name || 'Anonymous',
             comment: comment,
             image: image,
         }
@@ -57,19 +60,24 @@ console.log(match)
     }
 
     return (
+
         <div className="main-section">
             <div className='main-container'>
             {comments.map((text) => (
                     <div className='comment-submitted' key={text.id}>
-                    <h6>{text.name}</h6>
-                    <img className='comment-image' src= {text.image} alt=''/>
-                    <div className='submitted-comment'> {text.comment}</div>
+                        
+                   <div  className='comment-name'> <h6 className='name'>{text.name.toUpperCase()}</h6></div>
+                    <div className='comment-image' > <img src= {text.image} alt=''/></div>
+                    <div className='submitted-comment'>
+                    <p> {text.comment}</p>
+                    </div>
+                
                     </div>
                 ))}
             
                 <div className='comment-flexbox'>
                     <h3 className='comment-text'>Comment</h3>
-                    <input type='text' value={name} onChange={onChangeHandleName} placeholder='Name'></input>
+                    <input type='text' value={name} onChange={onChangeHandleName} placeholder='Username'></input>
                     <input type='text' value={image} onChange={onChangeHandleImage} placeholder='image' />
                     <textarea className='text-box' onChange={onChangeHandle} value={comment} />
                     <button onClick={addComment} className='submit-button'>Post</button>

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import Map from "./Map"
 import HomePageLines from "./HomePageLines"
 
-function Page() {
+function Page({Ifound}) {
 
     //creating state to hold subway station data
     const [stations, setStations] = useState([])
@@ -22,7 +22,8 @@ function Page() {
                 
                 <Map stations={stations} />
             </div>
-            <HomePageLines/>
+            
+            
         </>
     )
 }

@@ -43,6 +43,8 @@ function Lines() {
     //client side routing controlls which info the user sees all at once
     return (
         <>
+
+        
             <div>
                 <span>
                             <table className='train-table'>
@@ -112,6 +114,10 @@ function Lines() {
                                     <th></th>
                                 </tr>
                             </table>
+                            {/* <div className="lines-welcome">
+                            <h2>Welcome to the New York Subway Community: </h2>
+                            <h4>Select your MTA line and keep commuters updated</h4>
+                            </div> */}
                     <Switch>
                         <Route path={`${match.path}/a`}>
                             <A />

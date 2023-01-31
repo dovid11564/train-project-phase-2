@@ -14,6 +14,7 @@ function Page({Ifound}) {
             .then(response => response.json())
             .then(data => setStations(data))
     },[])
+    //this is the same fetch that we are doing on Header.js line 18. 
     
     
     return (

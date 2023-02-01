@@ -13,7 +13,6 @@ useEffect(()=>{
 
 // const found= lines.find(element => element=== element.line)
 
-
     return(
         <div>
             {lines.map((line)=>{

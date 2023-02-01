@@ -77,41 +77,41 @@ function Lines() {
                                 <tr>
                                     <th><NavLink to={`${match.path}/c`}><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/NYCS-bull-trans-C-Std.svg/1024px-NYCS-bull-trans-C-Std.svg.png" className="Metro-Logo" alt="C" /></NavLink></th>
                                     <th><NavLink to={`${match.path}/d`}><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/NYCS-bull-trans-D-Std.svg/1024px-NYCS-bull-trans-D-Std.svg.png" className="Metro-Logo" alt="D" /></NavLink></th>
-                                    <th></th>
-                                    <th></th>
+                                    <th className='unclickable'></th>
+                                    <th className='unclickable'></th>
                                     <th><NavLink to={`${match.path}/z`}><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/NYCS-bull-trans-Z-Std.svg/1024px-NYCS-bull-trans-Z-Std.svg.png" className="Metro-Logo" alt="Z" /></NavLink></th>
                                     <th><NavLink to={`${match.path}/q`}><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/NYCS-bull-trans-Q-Std.svg/1024px-NYCS-bull-trans-Q-Std.svg.png" className="Metro-Logo" alt="Q" /></NavLink></th>
                                     <th><NavLink to={`${match.path}/2`}><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/NYCS-bull-trans-2-Std.svg/1024px-NYCS-bull-trans-2-Std.svg.png" className="Metro-Logo" alt="2" /></NavLink></th>
                                     <th><NavLink to={`${match.path}/5`}><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/NYCS-bull-trans-5-Std.svg/1024px-NYCS-bull-trans-5-Std.svg.png" className="Metro-Logo" alt="5" /></NavLink></th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
+                                    <th className='unclickable'></th>
+                                    <th className='unclickable'></th>
+                                    <th className='unclickable'></th>
                                 </tr>
                                 <tr>
                                     <th><NavLink to={`${match.path}/e`}><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/NYCS-bull-trans-E-Std.svg/1024px-NYCS-bull-trans-E-Std.svg.png" className="Metro-Logo" alt="E" /></NavLink></th>
                                     <th><NavLink to={`${match.path}/f`}><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/NYCS-bull-trans-F-Std.svg/1024px-NYCS-bull-trans-F-Std.svg.png" className="Metro-Logo" alt="F" /></NavLink></th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
+                                    <th className='unclickable'></th>
+                                    <th className='unclickable'></th>
+                                    <th className='unclickable'></th>
                                     <th><NavLink to={`${match.path}/r`}><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/NYCS-bull-trans-R-Std.svg/1024px-NYCS-bull-trans-R-Std.svg.png" className="Metro-Logo" alt="R" /></NavLink></th>
                                     <th><NavLink to={`${match.path}/3`}><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/NYCS-bull-trans-3-Std.svg/1024px-NYCS-bull-trans-3-Std.svg.png" className="Metro-Logo" alt="3" /></NavLink></th>
                                     <th><NavLink to={`${match.path}/6`}><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/NYCS-bull-trans-6-Std.svg/1024px-NYCS-bull-trans-6-Std.svg.png" className="Metro-Logo" alt="6" /></NavLink></th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
+                                    <th className='unclickable'></th>
+                                    <th className='unclickable'></th>
+                                    <th className='unclickable'></th>
                                 </tr>
                                 <tr>
                                     <th></th>
                                     <th><NavLink to={`${match.path}/m`}><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/NYCS-bull-trans-M-Std.svg/1024px-NYCS-bull-trans-M-Std.svg.png" className="Metro-Logo" alt="M" /></NavLink></th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
+                                    <th className='unclickable'></th>
+                                    <th className='unclickable'></th>
+                                    <th className='unclickable'></th>
                                     <th><NavLink to={`${match.path}/w`}><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/NYCS-bull-trans-W-Std.svg/1024px-NYCS-bull-trans-W-Std.svg.png" className="Metro-Logo" alt="W" /></NavLink></th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
+                                    <th className='unclickable'></th>
+                                    <th className='unclickable'></th>
+                                    <th className='unclickable'></th>
+                                    <th className='unclickable'></th>
+                                    <th className='unclickable'></th>
                                 </tr>
                             </table>
                             {/* <div className="lines-welcome">

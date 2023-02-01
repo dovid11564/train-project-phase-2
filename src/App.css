@@ -45,7 +45,7 @@
 
 }
 
-  
+
 
 
 .website-title {
@@ -105,7 +105,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  
+
 
 }
 
@@ -149,11 +149,11 @@
   text-align: center;
   border-color: black;
   background-color: #FAF9F6;
- 
+
 }
 
-.table-div{
-  padding: 50px; 
+.table-div {
+  padding: 50px;
 
 }
 
@@ -178,16 +178,13 @@ th:hover {
   width: 190px;
 }
 
-
-
-.metro-image{
+.metro-image {
 
   width: 300px;
   height: 200px;
   margin: 20px 0px;
   border: 2px solid black;
 }
-
 
 .metro-map {
   width: 100px;
@@ -223,9 +220,7 @@ th:hover {
 .metro-map {
   width: 300px;
   height: 300px;
-
 }
-
 
 .submitted-comment {
   border-color: black;
@@ -234,27 +229,26 @@ th:hover {
   left: 13rem;
   bottom: 10rem;
   word-break: break-word;
-  overflow-wrap:break-word;
+  overflow-wrap: break-word;
   width: 250px;
   height: 150px;
-  
+
 }
 
-.comment-submitted{
+.comment-submitted {
   border: 2px solid black;
   border-radius: 10px;
   width: 60%;
-  height: auto; 
+  height: auto;
   min-height: 300px;
   padding: 0;
-  
+
 }
 
-.comment-name{
-  width:97%;
-  height:30px;
-  
-  margin:0px;
+.comment-name {
+  width: 97%;
+  height: 30px;
+  margin: 0px;
   padding: 10px;
   border-radius: 6px;
   display: flex;
@@ -263,64 +257,64 @@ th:hover {
   letter-spacing: 2px;
   border: 1px solid black;
   background-color: antiquewhite;
-
-
 }
 
-.comment-image{
+.comment-image {
   width: 25%;
   height: 250px;
   position: relative;
-
 }
 
-.please-work{
+.please-work {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: wrap;
   justify-content: space-around;
   position: absolute;
-  top:30vh;
-  left:50vh;
+  top: 30vh;
+  left: 50vh;
   z-index: 1000;
   border: 3px solid black;
-  background-color:  rgb(0, 195, 255);
+  background-color: rgb(0, 195, 255);
 }
 
-
-.lines-welcome{
+.lines-welcome {
   justify-content: center;
   text-align: center;
   margin: 400px;
   border: 3px solid black;
-  }
-
-  .header {
-    display: flex;
-    flex-wrap: nowrap;
-    padding: 30px;
-    background-color: rgb(0, 195, 255);
-    align-items: center;
-    align-content: center;
-    background-color: rgb(0, 195, 255);
-    flex-direction: row;
-justify-content: space-evenly;
 }
 
-.home-link{
-  padding:20Px;
+.header {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 30px;
+  background-color: rgb(0, 195, 255);
+  align-items: center;
+  align-content: center;
+  background-color: rgb(0, 195, 255);
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
-.community-link{
-  padding:20Px;
+.home-link {
+  padding: 20Px;
 }
 
-.about-link{
-  padding:20Px;
+.community-link {
+  padding: 20Px;
 }
 
-.remove-button-homepage{
-  bottom:0;
-  right:0;
+.about-link {
+  padding: 20Px;
+}
+
+.remove-button-homepage {
+  bottom: 0;
+  right: 0;
   position: absolute;
+}
+
+.unclickable {
+  pointer-events: none;
 }

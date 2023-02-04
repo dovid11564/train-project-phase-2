@@ -35,7 +35,7 @@ function Map({ stations }) {
 
     const Ifound = lines.filter(element => element.line === search)
 
-    //is this supposed to be the handle delete function
+    // is this supposed to be the handle delete function?
     function handleRemove(e) {
         setSearch('')
     }
@@ -111,6 +111,17 @@ function Map({ stations }) {
                         //if lines === ACE, then color = blue etc
                         return (
                             //this is where we can conditionally render the selected train lines, with the default being all of them?
+                            
+                            //some psuedocode for how this filter works
+                            //we need a state that handles the current displayed train lines
+                            //when we click on one of the lines in the chart above, we set the state of the current displayed train lines to that line
+                            //we also need a variable that filters all the train lines by the current state.
+                            //Now that I'm looking at this, I'm thinking that the above variable is going to have to work with the stations state directly
+                            //some actual code of how this might look might be like so
+
+                            // const displayedStations = stations.filter((metroLine) => {
+                                //return metroLine.line.includes(variable from line 118)
+                            // })
                             <Marker key={station.objectid} position={[station.the_geom.coordinates[1], station.the_geom.coordinates[0]]} >
                                 <Popup>
                                     {station.name}  <br /> {station.line}

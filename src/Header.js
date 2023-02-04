@@ -11,8 +11,6 @@ import {
 
 function Header() {
 
-  
-
   const [info, setInfo] = useState([])
 
   useEffect(() => {

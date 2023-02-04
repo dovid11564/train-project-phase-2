@@ -1,4 +1,3 @@
-
 import React from 'react';
 import A from "./Metro-Line-Folder/A.js"
 import B from "./Metro-Line-Folder/B.js"
@@ -24,13 +23,7 @@ import Six from "./Metro-Line-Folder/Six.js"
 import Seven from "./Metro-Line-Folder/Seven.js"
 import T from "./Metro-Line-Folder/T.js"
 import S from "./Metro-Line-Folder/S.js"
-
 import { NavLink, Switch, Route, useRouteMatch } from 'react-router-dom';
-
-
-
-
-
 
 function Lines() {
 
@@ -39,12 +32,9 @@ function Lines() {
 
     //state for our dropdown
 
-
     //client side routing controlls which info the user sees all at once
     return (
         <>
-
-        
             <div>
                 <span>
                             <table className='train-table'>

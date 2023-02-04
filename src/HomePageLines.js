@@ -1,6 +1,5 @@
 import React,{useState, useEffect} from "react";
 
-
 export default function HomePageLines(){
 
 const [lines, setLines]= useState([])

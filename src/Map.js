@@ -19,7 +19,7 @@ function Map({ stations }) {
             .then(data => setLines(data))
     }, [])
 
-    //this fetch is grabbing the comments
+    //i beleive that this fetch actually makes the popup when you click on the table. 
     useEffect(() => {
         fetch(`http://localhost:3000/comments?line=${search}`)
             .then(r => r.json())
@@ -39,14 +39,24 @@ function Map({ stations }) {
     function handleRemove(e) {
         setSearch('')
     }
+    //here we're gonna make the state variable that holds the displayed station
+    const [displayedStations, setDisplayedStations] = useState(stations)
+    //on each of the table click events, update the stations
 
+
+    //i am thinking we should make a handle click function to reduce clutter and dry up the code. 
+
+    function handleClick(event) {
+        console.log(event.target.name)
+        setSearch(event.target.name)
+    }
     return (
         <>
             <div className='table-div'>
                 <table className='train-table'>
                     <tr className='table-row'>
                         <th className='th'>Eighth Ave Line</th>
-                        <th className='th'><img name='A' onClick={(e) => setSearch(e.target.name)} className="Metro-Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/NYCS-bull-trans-A-Std.svg/1280px-NYCS-bull-trans-A-Std.svg.png" alt="A" /></th>
+                        <th className='th'><img name='A' onClick={(event) => handleClick(event)} className="Metro-Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/NYCS-bull-trans-A-Std.svg/1280px-NYCS-bull-trans-A-Std.svg.png" alt="A" /></th>
                         <th className='th'><img name='C' onClick={(e) => setSearch(e.target.name)} className="Metro-Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/NYCS-bull-trans-C-Std.svg/1280px-NYCS-bull-trans-C-Std.svg.png" alt="C" /></th>
                         <th className='th'><img name='E' onClick={(e) => setSearch(e.target.name)} className="Metro-Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/NYCS-bull-trans-E-Std.svg/1280px-NYCS-bull-trans-E-Std.svg.png" alt="E" /></th>
                         <th></th>
@@ -111,7 +121,7 @@ function Map({ stations }) {
                         //if lines === ACE, then color = blue etc
                         return (
                             //this is where we can conditionally render the selected train lines, with the default being all of them?
-                            
+
                             //some psuedocode for how this filter works
                             //we need a state that handles the current displayed train lines
                             //when we click on one of the lines in the chart above, we set the state of the current displayed train lines to that line
@@ -120,10 +130,10 @@ function Map({ stations }) {
                             //some actual code of how this might look might be like so
 
                             // const displayedStations = stations.filter((metroLine) => {
-                                //return metroLine.line.includes(variable from line 118)
+                            //return metroLine.line.includes(variable from line 118)
                             // })
                             <Marker key={station.objectid} position={[station.the_geom.coordinates[1], station.the_geom.coordinates[0]]} >
-                                <Popup>
+                                <Popup className="popup">
                                     {station.name}  <br /> {station.line}
                                 </Popup>
                             </Marker>

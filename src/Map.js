@@ -26,9 +26,6 @@ function Map({ stations }) {
             .then(data => setComment(data[0]?.comment))
     }, [search])
 
-
-
-
     // const Ifound= lines.find(element => element.line === setSearch(element))
     // const Ifound= lines.find(element => element.line.includes(setLines(element)))
     // const Ifound= lines.find(element => element.line.includes(lines))
@@ -40,16 +37,40 @@ function Map({ stations }) {
         setSearch('')
     }
     //here we're gonna make the state variable that holds the displayed station
-    const [displayedStations, setDisplayedStations] = useState(stations)
+    const [displayedStations, setDisplayedStations] = useState([])
     //on each of the table click events, update the stations
 
 
     //i am thinking we should make a handle click function to reduce clutter and dry up the code. 
 
     function handleClick(e) {
-        console.log(e.target.name)
+        console.log("e.target.name", e.target.name)
         setSearch(e.target.name)
-    }
+        //clear the previous displayed stations
+        setDisplayedStations({})
+
+
+
+        let updatedStations = stations.filter((station) => 
+            // station === station
+            station.line.includes(e.target.name)
+        )
+        
+        setDisplayedStations(updatedStations)
+
+        //iterate through the total stations
+    //     for (let i = 0; i < stations.length; i++) {
+    //         //check to see if any station has a match for the selected subway line
+    //         if (stations[i].notes.includes(e.target.name)) {
+    //             //if there is a match, add it to the displayedStations state (which controlls what is displayed)
+    //             setDisplayedStations(...displayedStations, stations[i])
+    //             console.log(displayedStations)
+    //         }
+    //     }
+        console.log(displayedStations)
+        console.log(updatedStations)
+   }
+
     return (
         <>
             <div className='table-div'>
@@ -116,7 +137,7 @@ function Map({ stations }) {
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
-                    {stations.map(station => {
+                    {displayedStations.map(station => {
                         // console.log(station.the_geom.coordinates)
                         //if lines === ACE, then color = blue etc
                         return (
@@ -139,11 +160,8 @@ function Map({ stations }) {
                             </Marker>
                         )
                     })}
-                    {/* <Marker position={[51.505, -0.09]}>
-                <Popup>
-                    A pretty CSS3 popup. <br /> Easily customizable.
-                </Popup>
-            </Marker> */}
+                  
+
                 </MapContainer>
             </div>
             <div>

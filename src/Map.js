@@ -1,4 +1,5 @@
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
+import * as L from "leaflet";
 import './App.css';
 import React, { useState, useEffect } from 'react';
 
@@ -48,28 +49,39 @@ function Map({ stations }) {
         setSearch(e.target.name)
         //clear the previous displayed stations
         setDisplayedStations({})
-
-
-
-        let updatedStations = stations.filter((station) => 
-            // station === station
+        let updatedStations = stations.filter((station) =>
             station.line.includes(e.target.name)
         )
-        
         setDisplayedStations(updatedStations)
+    }
+    //testing different marker styles here for the map. 
 
-        //iterate through the total stations
-    //     for (let i = 0; i < stations.length; i++) {
-    //         //check to see if any station has a match for the selected subway line
-    //         if (stations[i].notes.includes(e.target.name)) {
-    //             //if there is a match, add it to the displayedStations state (which controlls what is displayed)
-    //             setDisplayedStations(...displayedStations, stations[i])
-    //             console.log(displayedStations)
-    //         }
-    //     }
-        console.log(displayedStations)
-        console.log(updatedStations)
-   }
+    //  Create the Icon
+    const LeafIcon = L.Icon.extend({
+        options: {}
+    });
+
+    const blueIcon = new LeafIcon({
+        iconUrl:
+            "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|abcdef&chf=a,s,ee00FFFF"
+    }),
+        greenIcon = new LeafIcon({
+            iconUrl:
+                "https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|2ecc71&chf=a,s,ee00FFFF"
+        });
+
+    //  Use the state hook:
+    const [icon, setIcon] = useState(blueIcon);
+
+    // This function will change the state's icon:
+
+    const changeIconColor = (icon) => {
+        if (icon.options.iconUrl === greenIcon.options.iconUrl) {
+            setIcon((current) => (current = blueIcon));
+        } else {
+            setIcon((current) => (current = greenIcon));
+        }
+    };
 
     return (
         <>
@@ -138,30 +150,17 @@ function Map({ stations }) {
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
                     {displayedStations.map(station => {
-                        // console.log(station.the_geom.coordinates)
-                        //if lines === ACE, then color = blue etc
                         return (
-                            //this is where we can conditionally render the selected train lines, with the default being all of them?
-
-                            //some psuedocode for how this filter works
-                            //we need a state that handles the current displayed train lines
-                            //when we click on one of the lines in the chart above, we set the state of the current displayed train lines to that line
-                            //we also need a variable that filters all the train lines by the current state.
-                            //Now that I'm looking at this, I'm thinking that the above variable is going to have to work with the stations state directly
-                            //some actual code of how this might look might be like so
-
-                            // const displayedStations = stations.filter((metroLine) => {
-                            //return metroLine.line.includes(variable from line 118)
-                            // })
-                            <Marker key={station.objectid} position={[station.the_geom.coordinates[1], station.the_geom.coordinates[0]]} >
+                            <Marker key={station.objectid} position={[station.the_geom.coordinates[1], station.the_geom.coordinates[0]]} icon={icon} >
                                 <Popup className="popup">
                                     {station.name}  <br /> {station.line}
+                                    <button onClick={() => changeIconColor(icon)} >
+                                        Change Marker Color
+                                    </button>
                                 </Popup>
                             </Marker>
                         )
                     })}
-                  
-
                 </MapContainer>
             </div>
             <div>
@@ -173,7 +172,7 @@ function Map({ stations }) {
                             <p>{comment}</p>
                             <button className='remove-button-homepage' onClick={handleRemove}>X</button>
                         </div>
-                    )
+                        )
                 })}
             </div>
         </>
